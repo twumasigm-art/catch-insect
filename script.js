@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded'), () => {}
 const screens = document.querySelectorAll('.screen');
 const chooseInsectBtns = document.querySelectorAll('.choose-insect-btn');
 const startBtn = document.getElementById('start-btn')
@@ -6,7 +7,6 @@ const timeEl = document.getElementById('time')
 const scoreEl = document.getElementById('score')
 const message = document.getElementById('message')
 const playAgainBtn = document.getElementById('play-again-btn')
-
 let seconds = 0
 let score = 0
 let selectedInsect = {}
@@ -71,7 +71,7 @@ function gameOver() {
     message.innerHTML = `Game Over! <br> Your final score is ${score}`
     
     message.classList.add('visible')
-}
+};
 
 function getRandomLocation() {
     const width = window.innerWidth;
