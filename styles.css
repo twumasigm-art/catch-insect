@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -59,7 +60,6 @@ h1 {
   line-height: 1.4;
 }
 
-
 .insects-list {
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +78,6 @@ h1 {
   color: #fff;
   cursor: pointer;
   font-family: inherit;
-  transition: 0.3s;
   width: 150px;
   height: 150px;
 }
@@ -114,7 +113,7 @@ h1 {
 .message {
   line-height: 1.7;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 80%;
+  width: 100%;
   padding: 25px;
   z-index: 100;
   text-align: center;
@@ -123,6 +122,7 @@ h1 {
   top: 0;
   left: 50%;
   transform: translate(-50%, -150%);
+  transition: transform 0.4s ease-in;
 }
 
 .message.visible {
@@ -140,6 +140,8 @@ h1 {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  top: 200px;
+  left: 300px;
 }
 
 .insect img {
