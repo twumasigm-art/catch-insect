@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded'), () => {}
+document.addEventListener('DOMContentLoaded', () => {})
 const screens = document.querySelectorAll('.screen');
 const chooseInsectBtns = document.querySelectorAll('.choose-insect-btn');
 const startBtn = document.getElementById('start-btn')
@@ -71,7 +71,7 @@ function gameOver() {
     message.innerHTML = `Game Over! <br> Your final score is ${score}`
     
     message.classList.add('visible')
-};
+}
 
 function getRandomLocation() {
     const width = window.innerWidth;
