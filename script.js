@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {})
 const screens = document.querySelectorAll('.screen');
 const chooseInsectBtns = document.querySelectorAll('.choose-insect-btn');
 const startBtn = document.getElementById('start-btn')
@@ -15,6 +14,15 @@ let gameActive = false
 
 startBtn.addEventListener('click', () => screens[0].classList.add('up'))
 
+playAgainBtn.addEventListener('click', () => {
+    screens.forEach(screen => screen.classList.remove('up'));
+    selectedInsect = {};
+    gameContainer.innerHTML = '';
+    message.classList.remove('visible');
+})
+
+playAgainBtn.classList.remove('hidden');
+
 chooseInsectBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const img = btn.querySelector('img')
@@ -22,7 +30,7 @@ chooseInsectBtns.forEach(btn => {
         const alt = img.getAttribute('alt')
         selectedInsect = { src, alt }
         score = 0
-        seconds = 60
+        seconds = 61
         scoreEl.innerHTML = `Score: ${score}`
         timeEl.innerHTML = `Time: 01:00`
         message.classList.remove('visible')
